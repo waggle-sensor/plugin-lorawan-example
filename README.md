@@ -15,6 +15,33 @@ This plugin currently only works in the US Region due to regulations in radio ch
 To run lorawan-example on the node it must be scheduled with lorawan-listener using the [Edge Scheduler (ES)](https://docs.waggle-edge.ai/docs/about/architecture#edge-scheduler-es). There is a [walkthrough example](https://docs.waggle-edge.ai/docs/tutorials/schedule-jobs) on the Sage website under docs that can be followed. The lorawan-listener plugin can also be scheduled using the [Sage Portal's UI to create jobs](https://portal.sagecontinuum.org/create-job). An example of the job's yaml file is found below.
 
 ```
+name: Lorawan_ExampleJob
+plugins:
+- name: lorawan-example
+  pluginSpec:
+    image: registry.sagecontinuum.org/flozano/lorawan-example:0.0.1
+    args:
+    - --app-name
+    - "Smart_Agriculture"
+    - --device-name
+    - "E5 Mini Livestock Counter"
+    - --location-tag
+    - "West Barn"
+    selector:
+      zone: core
+- name: lorawan-listener
+  pluginSpec:
+    image: registry.sagecontinuum.org/flozano/lorawan-listener:0.0.1
+    selector:
+      zone: core
+nodeTags: []
+nodes:
+  W030: true
+scienceRules:
+- 'schedule("lorawan-example"): cronjob("lorawan-example", "* * * * *")'
+- 'schedule("lorawan-listener"): cronjob("lorawan-listener", "* * * * *")'
+successCriteria:
+- WallClock('1day')
 ```
 
 Once the job is scheduled, the node will publish values under the measurement 'lorawan.example.livestock.counter' to the beehive.
