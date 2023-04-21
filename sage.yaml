@@ -1,5 +1,5 @@
 name: "Lorawan Example"
-description: "An app to show an example of an application using the plugin lorawan-listener"
+description: "A plugin to show an example of an application using the plugin lorawan-listener"
 keywords: "LoRaWAN"
 authors: "Francisco Lozano"
 depends_on: ""
