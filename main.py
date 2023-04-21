@@ -48,7 +48,7 @@ def main():
                     "tenantName": msg.meta.get("tenantName")
                 }
 
-                plugin.publish("lorawan.example.Livestock.Count", int(msg.value), timestamp=time.time_ns(), meta=metadata)
+                plugin.publish("lorawan.example.livestock.count", int(msg.value), timestamp=time.time_ns(), meta=metadata)
 
 
 
