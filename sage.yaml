@@ -1,4 +1,4 @@
-name: "Lorawan Example"
+name: "lorawan-example"
 description: "A plugin to show an example of an application using the plugin lorawan-listener"
 keywords: "LoRaWAN"
 authors: "Francisco Lozano"
