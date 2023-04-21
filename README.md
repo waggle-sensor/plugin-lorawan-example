@@ -44,7 +44,7 @@ successCriteria:
 - WallClock('1day')
 ```
 
-Once the job is scheduled, the node will publish values under the measurement 'lorawan.example.livestock.counter' to the beehive.
+Once the job is scheduled, the node will publish values under the measurement 'lorawan.example.livestock.counter'.
 
 # Arguments
 
