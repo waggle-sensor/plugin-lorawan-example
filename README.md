@@ -1,6 +1,6 @@
 # LoRaWAN Example Usage Instructions
 
-## About The Plugin
+## About The Plugin 
 
 This plugin provides a practical demonstration of how to integrate the lorawan-listener plugin into your application. Specifically, it shows how to consume data from LoRa end devices that are used for livestock counting in a barn. The lorawan-listener plugin is used to retrieve this data. It's important to note that this plugin example will only retrieve data from lorawan-listener if it matches the specified application name, device name, and location tag. Any data that doesn't meet these requirements will be ignored. Once the data has been retrieved, this plugin publishes it under the measurement called 'lorawan.example.livestock.counter'. By following this example, you'll gain a better understanding of how to consume data from lorawan-listener and integrate it into your own application.
 
