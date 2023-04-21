@@ -2,6 +2,14 @@ name: "Lorawan Example"
 description: "An app to show an example of an application using the plugin lorawan-listener"
 keywords: "LoRaWAN"
 authors: "Francisco Lozano"
+depends_on: ""
+inputs:
+  - id: app-name
+    type: string
+  - id: device-name
+    type: string
+  - id: location-tag
+    type: string
 collaborators: ""
 funding: ""
 license: ""

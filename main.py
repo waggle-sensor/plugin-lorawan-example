@@ -9,16 +9,19 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--app-name",
+        type=str,
         default="Smart_Agriculture",
         help="The chirpstack application name",
     )
     parser.add_argument(
         "--device-name",
+        type=str,
         default="E5 Mini Livestock Counter",
         help="The chirpstack LoRa end device name",
     )
     parser.add_argument(
         "--location-tag",
+        type=str,
         default="West Barn",
         help="The value of chirpstack tag that details the location of the device",
     )
