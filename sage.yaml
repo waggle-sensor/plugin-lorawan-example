@@ -1,0 +1,12 @@
+name: "Lorawan Example: Livestock Tracker"
+description: "An app to show an example of an application using the plugin lorawan-listener"
+keywords: "LoRaWAN"
+authors: "Francisco Lozano"
+collaborators: ""
+funding: ""
+license: ""
+homepage: "https://github.com/waggle-sensor/plugin-lorawan-example"
+source:
+  architectures:
+    - "linux/amd64"
+    - "linux/arm64"
