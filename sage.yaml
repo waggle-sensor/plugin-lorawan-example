@@ -5,10 +5,16 @@ authors: "Francisco Lozano"
 inputs:
   - id: app-name
     type: string
+    description: The chirpstack application name
+    default: Smart_Agriculture
   - id: device-name
     type: string
+    description: The chirpstack LoRa end device name
+    default: E5 Mini Livestock Counter
   - id: location-tag
     type: string
+    description: The value of chirpstack tag that details the location of the device
+    default: West Barn
 collaborators: ""
 funding: ""
 license: ""
